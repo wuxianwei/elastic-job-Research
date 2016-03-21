@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 1999-2015 dangdang.com.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,22 +15,21 @@
  * </p>
  */
 
-package com.dangdang.ddframe.job.api;
+package com.dangdang.ddframe.job.internal.env;
 
 /**
- * 可停止的作业或目标.
+ * 获取时间的服务.
  * 
- * @author caohao
+ * @author zhangliang
  */
-public interface Stopable {
+public class TimeService {
     
     /**
-     * 停止运行中的作业或目标.
+     * 获取当前时间的毫秒数.
+     * 
+     * @return 当前时间的毫秒数
      */
-    void stop();
-    
-    /**
-     * 恢复运行作业或目标.
-     */
-    void resume();
+    public long getCurrentMillis() {
+        return System.currentTimeMillis();
+    }
 }

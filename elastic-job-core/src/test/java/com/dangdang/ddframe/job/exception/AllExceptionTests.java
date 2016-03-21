@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 1999-2015 dangdang.com.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +24,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
     JobConflictExceptionTest.class, 
-    TimeDiffIntolerableExceptionTest.class
+    TimeDiffIntolerableExceptionTest.class, 
+    JobTimeoutExceptionTest.class
     })
 public final class AllExceptionTests {
 }

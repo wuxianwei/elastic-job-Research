@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 1999-2015 dangdang.com.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,6 +17,7 @@
 
 package com.dangdang.ddframe.job.integrate;
 
+import org.junit.After;
 import org.junit.Before;
 
 import com.dangdang.ddframe.job.api.ElasticJob;
@@ -36,5 +37,10 @@ public abstract class AbstractBaseStdJobAutoInitTest extends AbstractBaseStdJobT
         setJobConfig(getJobConfig());
         initJob();
         assertRegCenterCommonInfo();
+    }
+    
+    @After
+    public void assertAfterJobRun() {
+        assertRegCenterListenerInfo();
     }
 }
